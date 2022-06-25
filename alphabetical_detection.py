@@ -4,15 +4,12 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.datasets import fetch_openml
-from sklearn.model_selection import train_test_split as tts
-from sklearn.linear_model import LogisticRegression as LR
-from sklearn.metrics import accuracy_score as acs
-import time
-
-# import os
-# directory_path = os.path.dirname(__file__)
-# file_path = os.path.join(directory_path, 'C:/Users/rajbi/OneDrive/Desktop/Coding Stuff/Python/Project/P123/image.npz')
-# print(file_path)
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+from PIL import Image
+import PIL.ImageOps
+import os, ssl, time
 
 X = np.load('image.npz')['arr_0']
 y = pd.read_csv("labels.csv")["labels"]
